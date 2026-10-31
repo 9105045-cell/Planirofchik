@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Мой планировщик — рабочий день</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="#day"><span class="brand-mark">м</span><span>мой планировщик<small>ПОРЯДОК В РАБОТЕ</small></span></a>
+    <nav aria-label="Основные разделы" id="navigation"></nav>
+    <div class="sidebar-foot"><span class="local-dot"></span> Личное пространство<small>Данные в этом браузере</small></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><span id="today-label"></span><span class="owner">Моё ИП <span class="avatar">Я</span></span></header>
+    <div id="notice" aria-live="polite"></div>
+    <main id="main" tabindex="-1"></main>
+    <footer>Мой планировщик · Локальное хранение <span>Ваше личное рабочее пространство</span></footer>
+  </div>
+  <dialog id="editor" aria-labelledby="dialog-title"></dialog>
+  <dialog id="confirm" aria-labelledby="confirm-title"></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <input type="file" id="import-file" accept=".json,application/json" hidden>
+</body>
+</html>
